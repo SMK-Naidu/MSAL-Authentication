@@ -1,0 +1,24 @@
+<table>
+<tr>
+   <td>
+    <a routerLink="/home" *ngIf="isLoggedIn()">[HOME]</a>
+   </td>
+   <td>
+    <a routerLink="/profile">[PROFILE]</a>
+   </td>
+<td>
+    <button (click)="login()" *ngIf="!isLoggedIn()">SIGN IN</button>
+</td>
+<td>
+    <button (click)="logout()" *ngIf="isLoggedIn()">SIGN OUT</button>
+</td>
+</tr>
+</table>
+
+<div *ngIf="!isLoggedIn()">
+    <h3>Your are NOT logged in</h3>
+</div>
+<table *ngIf="isLoggedIn()">
+
+</table>
+
